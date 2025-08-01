@@ -9,6 +9,7 @@ import type {
 	INodeTypeDescription,
 	JsonObject,
 } from 'n8n-workflow';
+import type { NodeConnectionType } from 'n8n-workflow';
 import { NodeOperationError } from 'n8n-workflow';
 
 import {EJSON} from 'bson';
@@ -46,8 +47,8 @@ export class MongoDb implements INodeType {
 		defaults: {
 			name: 'mongoDb',
 		},
-		inputs: ['main'],
-		outputs: ['main'],
+		inputs: <NodeConnectionType[]>['main'],
+		outputs: <NodeConnectionType[]>['main'],
 		credentials: [
 			{
 				name: 'mongoDb',

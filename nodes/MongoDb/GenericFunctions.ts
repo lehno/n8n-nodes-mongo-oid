@@ -110,13 +110,11 @@ export function prepareItems(
 			}
 
 			if (fieldData) {
-				if (fieldData) {
-					if (dateFields.includes(field)) {
-						fieldData = new Date(fieldData as string);
-					}
-					if (oidFields.includes(field)) {
-						fieldData = new ObjectId(fieldData as string);
-					}
+				if (dateFields.includes(field)) {
+					fieldData = new Date(fieldData as string);
+				}
+				if (oidFields.includes(field)) {
+					fieldData = new ObjectId(fieldData as string);
 				}
 			}
 

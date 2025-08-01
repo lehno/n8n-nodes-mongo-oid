@@ -257,6 +257,13 @@ export const nodeProperties: INodeProperties[] = [
 				default: false,
 				description: 'Whether to use dot notation to access date fields',
 			},
+			{
+				displayName: 'OID Fields',
+				name: 'oidFields',
+				type: 'string',
+				default: '',
+				description: 'Comma separeted list of fields that will be parse as Mongo OID type',
+			},
 		],
 	},
 ];
