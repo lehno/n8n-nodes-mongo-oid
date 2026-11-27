@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-mongo-oid",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "n8n community node to use mongo and BSON ObjectID",
   "keywords": [
     "n8n-community-node-package"
@@ -39,10 +39,9 @@
     "@typescript-eslint/parser": "~5.45",
     "eslint-plugin-n8n-nodes-base": "^1.11.0",
     "gulp": "^4.0.2",
-    "n8n-core": "*",
-    "n8n-workflow": "*",
+    "n8n-workflow": "^2.49.5",
     "prettier": "^2.7.1",
-    "typescript": "~4.8.4"
+    "typescript": "~5.9"
   },
   "dependencies": {
     "lodash": "^4.17.21",

@@ -9,10 +9,7 @@ import type {
 	INodeTypeDescription,
 	JsonObject,
 } from 'n8n-workflow';
-import type { NodeConnectionType } from 'n8n-workflow';
 import { NodeOperationError } from 'n8n-workflow';
-
-import {EJSON} from 'bson';
 
 import type {
 	FindOneAndReplaceOptions,
@@ -21,7 +18,7 @@ import type {
 	Sort,
 	Document,
 } from 'mongodb';
-import { ObjectId } from 'mongodb';
+import { BSON, ObjectId } from 'mongodb';
 import { generatePairedItemData } from '../../utils/utilities';
 import { nodeProperties } from './MongoDbProperties';
 
@@ -36,6 +33,8 @@ import {
 
 import type { IMongoParametricCredentials } from './mongoDb.types';
 
+const { EJSON } = BSON;
+
 export class MongoDb implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'Mongo DB OID',
@@ -47,8 +46,8 @@ export class MongoDb implements INodeType {
 		defaults: {
 			name: 'mongoDb',
 		},
-		inputs: <NodeConnectionType[]>['main'],
-		outputs: <NodeConnectionType[]>['main'],
+		inputs: ['main'],
+		outputs: ['main'],
 		credentials: [
 			{
 				name: 'mongoDb',
